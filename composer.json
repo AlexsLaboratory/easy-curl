@@ -2,7 +2,7 @@
     "name": "lowem/easy-curl",
     "description": "Allow you to make requests to API end points easily",
     "type": "library",
-    "license": "Apache 2.0",
+    "license": "Apache-2.0",
     "autoload": {
         "psr-4": {
             "Lowem\\EasyCurl\\": ""
