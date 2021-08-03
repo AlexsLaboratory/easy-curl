@@ -56,9 +56,26 @@ class EasyCurl {
       CURLOPT_FOLLOWLOCATION => TRUE,
       CURLOPT_CUSTOMREQUEST => 'POST',
       CURLOPT_POSTFIELDS => $postField,
-      CURLOPT_HTTPHEADER => $header,
+      CURLOPT_HTTPHEADER => $header
     ]);
     $this->exec_message = curl_exec($this->conn);
+
+    if (curl_errno($this->conn)) {
+      $this->error_message = curl_error($this->conn);
+    }
+  }
+
+  public function get() {
+    curl_setopt_array($this->conn, [
+      CURLOPT_RETURNTRANSFER => TRUE,
+      CURLOPT_ENCODING => '',
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 0,
+      CURLOPT_FOLLOWLOCATION => TRUE,
+      CURLOPT_CUSTOMREQUEST => 'GET'
+    ]);
+    $this->exec_message = curl_exec($this->conn);
+
     if (curl_errno($this->conn)) {
       $this->error_message = curl_error($this->conn);
     }
