@@ -39,4 +39,13 @@ class EasyCurlTest extends TestCase {
     $this->assertEmpty($test->getErrorMessage());
     $test->close();
   }
+
+  public function testDelete() {
+    $test = new EasyCurl("http://192.168.160.137:8080/geoserver/rest/workspaces/Test1?recurse=true");
+    $test->setBasicAuth("admin", "geoserver");
+    $test->delete();
+
+    $this->assertEmpty($test->getErrorMessage());
+    $test->close();
+  }
 }
