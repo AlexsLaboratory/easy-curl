@@ -13,5 +13,20 @@ class EasyCurlTest extends TestCase {
     ]);
 
     $this->assertEmpty($test->getErrorMessage());
+    $test->close();
+  }
+
+  public function testPost() {
+    $test = new EasyCurl("http://192.168.160.137:8080/geoserver/rest/workspaces?default=false");
+    $test->setBasicAuth("admin", "geoserver");
+    $test->post('<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <name>Test11</name>
+</workspace>', [
+      "Content-Type: application/xml"
+    ]);
+
+    $this->assertEmpty($test->getErrorMessage());
+    $test->close();
   }
 }
