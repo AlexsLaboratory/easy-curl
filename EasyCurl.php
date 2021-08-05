@@ -4,7 +4,7 @@ namespace Lowem\EasyCurl;
 
 class EasyCurl {
   private $conn;
-  private string $error_message = "";
+  private string $error_code = "";
   private string $exec_message = "";
 
   public function __construct($url) {
@@ -18,8 +18,8 @@ class EasyCurl {
   /**
    * @return string
    */
-  public function getErrorMessage(): string {
-    return $this->error_message;
+  public function getErrorCode(): string {
+    return $this->error_code;
   }
 
   /**
@@ -42,8 +42,13 @@ class EasyCurl {
     ]);
     $this->exec_message = curl_exec($this->conn);
 
-    if (curl_errno($this->conn)) {
-      $this->error_message = curl_error($this->conn);
+    if (!curl_errno($this->conn)) {
+      switch ($http_code = curl_getinfo($this->conn, CURLINFO_RESPONSE_CODE)) {
+        case 200:
+          break;
+        default:
+          $this->error_code = $http_code;
+      }
     }
   }
 
@@ -60,8 +65,13 @@ class EasyCurl {
     ]);
     $this->exec_message = curl_exec($this->conn);
 
-    if (curl_errno($this->conn)) {
-      $this->error_message = curl_error($this->conn);
+    if (!curl_errno($this->conn)) {
+      switch ($http_code = curl_getinfo($this->conn, CURLINFO_RESPONSE_CODE)) {
+        case 200:
+          break;
+        default:
+          $this->error_code = $http_code;
+      }
     }
   }
 
@@ -76,8 +86,13 @@ class EasyCurl {
     ]);
     $this->exec_message = curl_exec($this->conn);
 
-    if (curl_errno($this->conn)) {
-      $this->error_message = curl_error($this->conn);
+    if (!curl_errno($this->conn)) {
+      switch ($http_code = curl_getinfo($this->conn, CURLINFO_RESPONSE_CODE)) {
+        case 200:
+          break;
+        default:
+          $this->error_code = $http_code;
+      }
     }
   }
 
@@ -92,8 +107,13 @@ class EasyCurl {
     ]);
     $this->exec_message = curl_exec($this->conn);
 
-    if (curl_errno($this->conn)) {
-      $this->error_message = curl_error($this->conn);
+    if (!curl_errno($this->conn)) {
+      switch ($http_code = curl_getinfo($this->conn, CURLINFO_RESPONSE_CODE)) {
+        case 200:
+          break;
+        default:
+          $this->error_code = $http_code;
+      }
     }
   }
 
