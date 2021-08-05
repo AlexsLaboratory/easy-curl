@@ -12,31 +12,31 @@ class EasyCurlTest extends TestCase {
       "Content-Type: image/tiff",
     ]);
 
-    $this->assertEmpty($test->getErrorMessage());
+    $this->assertEmpty($test->getErrorCode());
     $test->close();
   }
 
   public function testPost() {
     $test = new EasyCurl("http://192.168.160.137:8080/geoserver/rest/workspaces?default=false");
     $test->setBasicAuth("admin", "geoserver");
-    $test->post('<?xml version="1.0" encoding="UTF-8"?>
+    $test->post("<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 <workspace>
     <name>Test11</name>
-</workspace>', [
+</workspace>", [
       "Content-Type: application/xml"
     ]);
 
-    $this->assertEmpty($test->getErrorMessage());
+    $this->assertEmpty($test->getErrorCode());
     $test->close();
   }
 
   public function testGet() {
-    $test = new EasyCurl("http://192.168.160.137:8080/geoserver/rest/workspaces");
+    $test = new EasyCurl("http://192.168.160.137:8080/geoserver/rest/workspace");
     $test->setBasicAuth("admin", "geoserver");
     $test->get();
     print_r($test->getExecMessage());
 
-    $this->assertEmpty($test->getErrorMessage());
+    $this->assertEmpty($test->getErrorCode());
     $test->close();
   }
 
@@ -45,7 +45,7 @@ class EasyCurlTest extends TestCase {
     $test->setBasicAuth("admin", "geoserver");
     $test->delete();
 
-    $this->assertEmpty($test->getErrorMessage());
+    $this->assertEmpty($test->getErrorCode());
     $test->close();
   }
 }
