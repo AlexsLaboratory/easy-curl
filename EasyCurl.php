@@ -29,6 +29,17 @@ class EasyCurl {
     return $this->exec_message;
   }
 
+  private function errorCheck() {
+    if (!curl_errno($this->conn)) {
+      switch ($http_code = curl_getinfo($this->conn, CURLINFO_RESPONSE_CODE)) {
+        case $http_code >= 200 && $http_code <= 226:
+          break;
+        default:
+          $this->error_code = $http_code;
+      }
+    }
+  }
+
   public function put($postField, $header = []) {
     curl_setopt_array($this->conn, [
       CURLOPT_CUSTOMREQUEST => "PUT",
@@ -41,15 +52,7 @@ class EasyCurl {
       CURLOPT_HTTPHEADER => $header
     ]);
     $this->exec_message = curl_exec($this->conn);
-
-    if (!curl_errno($this->conn)) {
-      switch ($http_code = curl_getinfo($this->conn, CURLINFO_RESPONSE_CODE)) {
-        case 200:
-          break;
-        default:
-          $this->error_code = $http_code;
-      }
-    }
+    $this->errorCheck();
   }
 
   public function post($postField, $header = []) {
@@ -64,15 +67,7 @@ class EasyCurl {
       CURLOPT_HTTPHEADER => $header
     ]);
     $this->exec_message = curl_exec($this->conn);
-
-    if (!curl_errno($this->conn)) {
-      switch ($http_code = curl_getinfo($this->conn, CURLINFO_RESPONSE_CODE)) {
-        case 200:
-          break;
-        default:
-          $this->error_code = $http_code;
-      }
-    }
+    $this->errorCheck();
   }
 
   public function get() {
@@ -85,15 +80,7 @@ class EasyCurl {
       CURLOPT_CUSTOMREQUEST => 'GET'
     ]);
     $this->exec_message = curl_exec($this->conn);
-
-    if (!curl_errno($this->conn)) {
-      switch ($http_code = curl_getinfo($this->conn, CURLINFO_RESPONSE_CODE)) {
-        case 200:
-          break;
-        default:
-          $this->error_code = $http_code;
-      }
-    }
+    $this->errorCheck();
   }
 
   public function delete() {
@@ -106,15 +93,7 @@ class EasyCurl {
       CURLOPT_CUSTOMREQUEST => 'DELETE'
     ]);
     $this->exec_message = curl_exec($this->conn);
-
-    if (!curl_errno($this->conn)) {
-      switch ($http_code = curl_getinfo($this->conn, CURLINFO_RESPONSE_CODE)) {
-        case 200:
-          break;
-        default:
-          $this->error_code = $http_code;
-      }
-    }
+    $this->errorCheck();
   }
 
   public function close() {
