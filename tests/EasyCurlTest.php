@@ -12,7 +12,7 @@ class EasyCurlTest extends TestCase {
       "Content-Type: image/tiff",
     ]);
 
-    $this->assertEmpty($test->getErrorCode());
+    $this->assertIsNotNumeric($test->getErrorCode());
     $test->close();
   }
 
@@ -26,17 +26,17 @@ class EasyCurlTest extends TestCase {
       "Content-Type: application/xml"
     ]);
 
-    $this->assertEmpty($test->getErrorCode());
+    $this->assertIsNotNumeric($test->getErrorCode());
     $test->close();
   }
 
   public function testGet() {
-    $test = new EasyCurl("http://192.168.160.137:8080/geoserver/rest/workspace");
+    $test = new EasyCurl("http://192.168.160.137:8080/geoserver/rest/workspaces");
     $test->setBasicAuth("admin", "geoserver");
     $test->get();
     print_r($test->getExecMessage());
 
-    $this->assertEmpty($test->getErrorCode());
+    $this->assertIsNotNumeric($test->getErrorCode());
     $test->close();
   }
 
@@ -45,7 +45,7 @@ class EasyCurlTest extends TestCase {
     $test->setBasicAuth("admin", "geoserver");
     $test->delete();
 
-    $this->assertEmpty($test->getErrorCode());
+    $this->assertIsNotNumeric($test->getErrorCode());
     $test->close();
   }
 }
