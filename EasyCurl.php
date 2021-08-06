@@ -4,7 +4,6 @@ namespace Lowem\EasyCurl;
 
 class EasyCurl {
   private $conn;
-  private string $error_code = "";
   private string $exec_message = "";
 
   public function __construct($url) {
@@ -18,28 +17,27 @@ class EasyCurl {
   /**
    * @return string
    */
-  public function getErrorCode(): string {
-    return $this->error_code;
-  }
-
-  /**
-   * @return string
-   */
   public function getExecMessage(): string {
     return $this->exec_message;
   }
 
+  /**
+   * @throws HTTPRequestException
+   */
   private function errorCheck() {
     if (!curl_errno($this->conn)) {
       switch ($http_code = curl_getinfo($this->conn, CURLINFO_RESPONSE_CODE)) {
         case $http_code >= 200 && $http_code <= 226:
           break;
         default:
-          $this->error_code = $http_code;
+          throw new HTTPRequestException("", $http_code);
       }
     }
   }
 
+  /**
+   * @throws HTTPRequestException
+   */
   public function put($postField, $header = []) {
     curl_setopt_array($this->conn, [
       CURLOPT_CUSTOMREQUEST => "PUT",
@@ -55,6 +53,9 @@ class EasyCurl {
     $this->errorCheck();
   }
 
+  /**
+   * @throws HTTPRequestException
+   */
   public function post($postField, $header = []) {
     curl_setopt_array($this->conn, [
       CURLOPT_RETURNTRANSFER => TRUE,
@@ -70,6 +71,9 @@ class EasyCurl {
     $this->errorCheck();
   }
 
+  /**
+   * @throws HTTPRequestException
+   */
   public function get($header = []) {
     curl_setopt_array($this->conn, [
       CURLOPT_RETURNTRANSFER => TRUE,
@@ -84,6 +88,9 @@ class EasyCurl {
     $this->errorCheck();
   }
 
+  /**
+   * @throws HTTPRequestException
+   */
   public function delete($header = []) {
     curl_setopt_array($this->conn, [
       CURLOPT_RETURNTRANSFER => TRUE,
