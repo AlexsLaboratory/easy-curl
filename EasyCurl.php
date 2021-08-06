@@ -70,27 +70,29 @@ class EasyCurl {
     $this->errorCheck();
   }
 
-  public function get() {
+  public function get($header = []) {
     curl_setopt_array($this->conn, [
       CURLOPT_RETURNTRANSFER => TRUE,
       CURLOPT_ENCODING => '',
       CURLOPT_MAXREDIRS => 10,
       CURLOPT_TIMEOUT => 0,
       CURLOPT_FOLLOWLOCATION => TRUE,
-      CURLOPT_CUSTOMREQUEST => 'GET'
+      CURLOPT_CUSTOMREQUEST => 'GET',
+      CURLOPT_HTTPHEADER => $header
     ]);
     $this->exec_message = curl_exec($this->conn);
     $this->errorCheck();
   }
 
-  public function delete() {
+  public function delete($header = []) {
     curl_setopt_array($this->conn, [
       CURLOPT_RETURNTRANSFER => TRUE,
       CURLOPT_ENCODING => '',
       CURLOPT_MAXREDIRS => 10,
       CURLOPT_TIMEOUT => 0,
       CURLOPT_FOLLOWLOCATION => TRUE,
-      CURLOPT_CUSTOMREQUEST => 'DELETE'
+      CURLOPT_CUSTOMREQUEST => 'DELETE',
+      CURLOPT_HTTPHEADER => $header
     ]);
     $this->exec_message = curl_exec($this->conn);
     $this->errorCheck();
