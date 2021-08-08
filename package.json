@@ -1,0 +1,41 @@
+{
+  "name": "easy-curl",
+  "version": "1.0.0",
+  "description": "<h3 align=\"center\">Easy Curl</h3>",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "changelog": "auto-changelog"
+  },
+  "auto-changelog": {
+    "template": "changelog-template.hbs",
+    "unreleased": false,
+    "commitLimit": false,
+    "breakingPattern": "BREAKING CHANGE:",
+    "ignoreCommitPattern": "^test:.+",
+    "hideCredit": true,
+    "replaceText": {
+      "feat:": "",
+      "fix:": "",
+      "chore:": "",
+      "refactor:": "",
+      "style:" : "",
+      "docs:" : "",
+      "perf:" : ""
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lowe-Man/easy-curl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lowe-Man/easy-curl/issues"
+  },
+  "homepage": "https://github.com/Lowe-Man/easy-curl#readme",
+  "devDependencies": {
+    "auto-changelog": "^2.3.0"
+  }
+}

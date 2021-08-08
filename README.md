@@ -168,18 +168,18 @@ use Lowem\EasyCurl\EasyCurl;
 
 ```php
 $test = new EasyCurl("https://jsonplaceholder.typicode.com/posts/1");
- try {
-$data = [
-  "id" => 1,
-  "title" => "foo",
-  "body" => "bar",
-  "userId" => 1
-];
-$test->put(json_encode($data), [
-  "Content-type: application/json; charset=UTF-8",
-]);
+try {
+  $data = [
+   "id" => 1,
+   "title" => "foo",
+   "body" => "bar",
+   "userId" => 1
+  ];
+  $test->put(json_encode($data), [
+    "Content-type: application/json; charset=UTF-8",
+  ]);
 } catch (HTTPRequestException $e) {
-echo $e->getCustomMessage();
+  echo $e->getCustomMessage();
 }
 print_r($test->getExecMessage());
 
