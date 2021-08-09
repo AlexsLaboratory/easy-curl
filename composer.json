@@ -6,6 +6,13 @@
   "scripts": {
     "test": "vendor/bin/phpunit"
   },
+  "keywords": [
+    "http",
+    "ipv6",
+    "curl",
+    "sockets",
+    "fsockopen"
+  ],
   "autoload": {
     "psr-4": {
       "Lowem\\EasyCurl\\": ""
