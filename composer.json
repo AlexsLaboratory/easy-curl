@@ -15,7 +15,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Lowem\\EasyCurl\\": ""
+      "Lowem\\EasyCurl\\": "src/"
     }
   },
   "authors": [
