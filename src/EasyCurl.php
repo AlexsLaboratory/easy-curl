@@ -4,7 +4,7 @@ namespace Lowem\EasyCurl;
 
 class EasyCurl {
   private $conn;
-  private string $exec_message = "";
+  private $exec_message = "";
 
   public function __construct($url) {
     $this->conn = curl_init($url);

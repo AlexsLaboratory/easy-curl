@@ -8,7 +8,7 @@ use Throwable;
 class HTTPRequestException extends Exception {
   public function __construct($message = "", $code = 0, Throwable $previous = NULL) { parent::__construct($message, $code, $previous); }
 
-  private array $http_status_codes = [
+  private $http_status_codes = [
     100 => "Informational: Continue",
     101 => "Informational: Switching Protocols",
     102 => "Informational: Processing",
