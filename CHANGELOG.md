@@ -6,90 +6,107 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
-## [v3.1.0](https://github.com/Lowe-Man/easy-curl/compare/v3.0.0...v3.1.0) - 2021-08-07
+## [v3.1.1](https://github.com/Lowe-Man/easy-curl/compare/v3.1.0...v3.1.1) - 2021-08-19
 
 
 
 
 ### Commits
 
--  Require PHP JSON Extension [`5471f91`](https://github.com/Lowe-Man/easy-curl/commit/5471f912d0d3ef4463cd47560c83a1d04af0ac16)
+-  Add More Comprehensive README and Create CHANGELOG [`19c42b7`](https://github.com/Lowe-Man/easy-curl/commit/19c42b7147881303c64ea84050a06afba9ae8d81)
+-  Create Comprehensive Ignore List [`4046a38`](https://github.com/Lowe-Man/easy-curl/commit/4046a38f39fab8b50a855f7740aeca25d59e197e)
+- build: Add NodeJS to Project For Generating the CHANGELOG Automatically [`7b0ac80`](https://github.com/Lowe-Man/easy-curl/commit/7b0ac809854d2a6f4a7efd094ac59ef7b46950d5)
+- ci: Run Automated Tests [`2939e99`](https://github.com/Lowe-Man/easy-curl/commit/2939e99a32023f03be80b65da1613e7188807a97)
+-  Set Project Language Level to PHP 7.0 [`72401af`](https://github.com/Lowe-Man/easy-curl/commit/72401af6b57538c842dbfd1e3f796a0493a1cbd5)
+-  Fix Wrong Example Code in README [`d4681d0`](https://github.com/Lowe-Man/easy-curl/commit/d4681d03c2f67b560bd9a4df635c8ca4a41c7987)
+-  Add Key Word List to composer.json [`d6e8453`](https://github.com/Lowe-Man/easy-curl/commit/d6e8453000ad9558f045017a9f79f4d77d249cc2)
+-  Remove PHP 7.4 Specific Features [`8b451fa`](https://github.com/Lowe-Man/easy-curl/commit/8b451fa72bd3fdb1bf34b9e3f1ae6372f5b46c84)
+-  Move Code to "src" Directory [`680715c`](https://github.com/Lowe-Man/easy-curl/commit/680715ca0a786434be9267deece32971f46d9a57)
 
-## [v3.0.0](https://github.com/Lowe-Man/easy-curl/compare/v2.1.0...v3.0.0) - 2021-08-07
-
-
-
-
-### Commits
-
-- **Breaking change:**  Create More Robust Error Reporting Handler [`9d207d0`](https://github.com/Lowe-Man/easy-curl/commit/9d207d02a3d7ca796c76d894e65bc1d3d03d95b0)
-
-## [v2.1.0](https://github.com/Lowe-Man/easy-curl/compare/v2.0.1...v2.1.0) - 2021-08-07
-
-
-
-
-### Commits
-
--  Add Header Options to Other Methods [`0519864`](https://github.com/Lowe-Man/easy-curl/commit/0519864dd611a55a84712980e55c9e8b4496e6ca)
-
-## [v2.0.1](https://github.com/Lowe-Man/easy-curl/compare/v2.0.0...v2.0.1) - 2021-08-07
+## [v3.1.0](https://github.com/Lowe-Man/easy-curl/compare/v3.0.0...v3.1.0) - 2021-08-11
 
 
 
 
 ### Commits
 
--  Prevent HTTP 2xx Codes From Showing Up As Errors [`c992b52`](https://github.com/Lowe-Man/easy-curl/commit/c992b52d0f1791582fbd6304c45bfc3592d0dd3e)
+-  Require PHP JSON Extension [`e32f116`](https://github.com/Lowe-Man/easy-curl/commit/e32f116fde236df2982c2ed45fa256015eba7de1)
 
-## [v2.0.0](https://github.com/Lowe-Man/easy-curl/compare/v1.0.0...v2.0.0) - 2021-08-07
-
-
-
-
-### Commits
-
-- **Breaking change:**  Access HTTP Response Code [`0089756`](https://github.com/Lowe-Man/easy-curl/commit/008975613b8ad49bcf5a03979d6c4b6920c1a9ea)
--  Change License to MIT [`479bbe7`](https://github.com/Lowe-Man/easy-curl/commit/479bbe765d6f52ca3cf0d597cf799db4e1641d54)
--  Auto Format composer.json [`2d1a896`](https://github.com/Lowe-Man/easy-curl/commit/2d1a8968b9954c1fcedb5edbfbe6142d5bf1dac9)
-
-## [v1.0.0](https://github.com/Lowe-Man/easy-curl/compare/v0.3.0...v1.0.0) - 2021-08-03
+## [v3.0.0](https://github.com/Lowe-Man/easy-curl/compare/v2.1.0...v3.0.0) - 2021-08-11
 
 
 
 
 ### Commits
 
--  Add DELETE Method Wrapper [`087198f`](https://github.com/Lowe-Man/easy-curl/commit/087198f5cc86439a2c6557c0c47729e11a3ffee0)
+- **Breaking change:**  Create More Robust Error Reporting Handler [`1889508`](https://github.com/Lowe-Man/easy-curl/commit/1889508beb69d3736f86246c73e0aff15abe74bd)
 
-## [v0.3.0](https://github.com/Lowe-Man/easy-curl/compare/v0.2.0...v0.3.0) - 2021-08-03
-
-
-
-
-### Commits
-
--  Add GET Method to Wrapper [`401e4ac`](https://github.com/Lowe-Man/easy-curl/commit/401e4aca37f8b4a329f5d6f8662488cb66535e92)
-
-## [v0.2.0](https://github.com/Lowe-Man/easy-curl/compare/v0.1.0...v0.2.0) - 2021-08-03
+## [v2.1.0](https://github.com/Lowe-Man/easy-curl/compare/v2.0.1...v2.1.0) - 2021-08-11
 
 
 
 
 ### Commits
 
--  Add POST Method to Wrapper [`c811d31`](https://github.com/Lowe-Man/easy-curl/commit/c811d31c06b966a0db91cf1a40974679d38e76d0)
+-  Add Header Options to Other Methods [`6b27e41`](https://github.com/Lowe-Man/easy-curl/commit/6b27e41321ce1e97f26053c9d71d1bc6a94d3a97)
 
-## v0.1.0 - 2021-08-03
+## [v2.0.1](https://github.com/Lowe-Man/easy-curl/compare/v2.0.0...v2.0.1) - 2021-08-11
 
 
 
 
 ### Commits
 
--  Add Test Library and .gitattributes/.gitignore Files [`27481be`](https://github.com/Lowe-Man/easy-curl/commit/27481be9b614c412740ef930285d12b0dd731971)
-- Initial commit [`b330c1a`](https://github.com/Lowe-Man/easy-curl/commit/b330c1abe2911779d57ccc4dfca49e107b60d6c4)
--  Create .gitignore File [`723f04d`](https://github.com/Lowe-Man/easy-curl/commit/723f04db1159402e92ae9c41a8a12a829d273510)
--  Create Basic PUT Request [`af0f321`](https://github.com/Lowe-Man/easy-curl/commit/af0f321476fcc387a54639000c028ff79180bc77)
--  Initiate Project with Composer [`8fe83b6`](https://github.com/Lowe-Man/easy-curl/commit/8fe83b67c37732b3fa29748687b5c5ec22bc08d7)
+-  Prevent HTTP 2xx Codes From Showing Up As Errors [`4cfa705`](https://github.com/Lowe-Man/easy-curl/commit/4cfa705157abd90ba63192c125f9bab243c77715)
+
+## [v2.0.0](https://github.com/Lowe-Man/easy-curl/compare/v1.0.0...v2.0.0) - 2021-08-11
+
+
+
+
+### Commits
+
+- **Breaking change:**  Access HTTP Response Code [`a9bfba2`](https://github.com/Lowe-Man/easy-curl/commit/a9bfba290c120142e7edebec9317f4fbcd745dba)
+-  Change License to MIT [`5ef7747`](https://github.com/Lowe-Man/easy-curl/commit/5ef77479c7bea929b3b5759856f01826333ae10e)
+-  Auto Format composer.json [`8ebf3bd`](https://github.com/Lowe-Man/easy-curl/commit/8ebf3bdf89cf5d09392ca59e905c3e00d6efe6d8)
+
+## [v1.0.0](https://github.com/Lowe-Man/easy-curl/compare/v0.3.0...v1.0.0) - 2021-08-11
+
+
+
+
+### Commits
+
+-  Add DELETE Method Wrapper [`45055fd`](https://github.com/Lowe-Man/easy-curl/commit/45055fd7d9a332784bbfbfe873831fa7c3023cc2)
+
+## [v0.3.0](https://github.com/Lowe-Man/easy-curl/compare/v0.2.0...v0.3.0) - 2021-08-11
+
+
+
+
+### Commits
+
+-  Add GET Method to Wrapper [`f0828f2`](https://github.com/Lowe-Man/easy-curl/commit/f0828f28c995bfc9acf768328f8a066a0830968d)
+
+## [v0.2.0](https://github.com/Lowe-Man/easy-curl/compare/v0.1.0...v0.2.0) - 2021-08-11
+
+
+
+
+### Commits
+
+-  Add POST Method to Wrapper [`e4940dd`](https://github.com/Lowe-Man/easy-curl/commit/e4940dd4be5847a156d1db7abb766456a014e993)
+
+## v0.1.0 - 2021-08-11
+
+
+
+
+### Commits
+
+-  Add Test Library and .gitattributes/.gitignore Files [`deaf114`](https://github.com/Lowe-Man/easy-curl/commit/deaf114f2bb0692f12ab1cdf07565c9c61bc0522)
+- Initial commit [`ed5f143`](https://github.com/Lowe-Man/easy-curl/commit/ed5f1436081270118274d0969428d53de4218e13)
+-  Create .gitignore File [`9dedeb2`](https://github.com/Lowe-Man/easy-curl/commit/9dedeb2928e782da8e6539e71d4c5f74b8d3e2a5)
+-  Create Basic PUT Request [`a85653b`](https://github.com/Lowe-Man/easy-curl/commit/a85653bbbef2add0737f648046a3df0bfe376395)
+-  Initiate Project with Composer [`b7ad17e`](https://github.com/Lowe-Man/easy-curl/commit/b7ad17e59a48e0b6233cf69375ac05adcf1f7390)
 
