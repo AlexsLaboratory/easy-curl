@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [v3.2.0](https://github.com/Lowe-Man/easy-curl/compare/v3.1.1...v3.2.0) - 2021-08-25
+
+
+
+
+### Commits
+
+-  Allow postField to Take in Array of URL Parameters [`8877dc7`](https://github.com/Lowe-Man/easy-curl/commit/8877dc74e98eb62898ab4a9612e9db1118697af1)
+
 ## [v3.1.1](https://github.com/Lowe-Man/easy-curl/compare/v3.1.0...v3.1.1) - 2021-08-19
 
 
@@ -17,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -  Create Comprehensive Ignore List [`4046a38`](https://github.com/Lowe-Man/easy-curl/commit/4046a38f39fab8b50a855f7740aeca25d59e197e)
 - build: Add NodeJS to Project For Generating the CHANGELOG Automatically [`7b0ac80`](https://github.com/Lowe-Man/easy-curl/commit/7b0ac809854d2a6f4a7efd094ac59ef7b46950d5)
 - ci: Run Automated Tests [`2939e99`](https://github.com/Lowe-Man/easy-curl/commit/2939e99a32023f03be80b65da1613e7188807a97)
+-  Update CHANGELOG to Match Changes [`04bc497`](https://github.com/Lowe-Man/easy-curl/commit/04bc4979420543ba958c38e6090183685557b2e6)
 -  Set Project Language Level to PHP 7.0 [`72401af`](https://github.com/Lowe-Man/easy-curl/commit/72401af6b57538c842dbfd1e3f796a0493a1cbd5)
 -  Fix Wrong Example Code in README [`d4681d0`](https://github.com/Lowe-Man/easy-curl/commit/d4681d03c2f67b560bd9a4df635c8ca4a41c7987)
 -  Add Key Word List to composer.json [`d6e8453`](https://github.com/Lowe-Man/easy-curl/commit/d6e8453000ad9558f045017a9f79f4d77d249cc2)
