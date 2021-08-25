@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [v4.0.0](https://github.com/Lowe-Man/easy-curl/compare/v3.2.0...v4.0.0) - 2021-08-25
+
+
+
+
+### Commits
+
+- **Breaking change:**  Add postField to "delete" method [`33a48e2`](https://github.com/Lowe-Man/easy-curl/commit/33a48e2d1d63ecd949806e5f86397101bbddaeff)
+-  Update Changelog [`b5c5932`](https://github.com/Lowe-Man/easy-curl/commit/b5c59323483fbccaa23293503ed409686f1bbcd0)
+
 ## [v3.2.0](https://github.com/Lowe-Man/easy-curl/compare/v3.1.1...v3.2.0) - 2021-08-25
 
 
