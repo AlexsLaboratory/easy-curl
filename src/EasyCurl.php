@@ -103,7 +103,14 @@ class EasyCurl {
   /**
    * @throws HTTPRequestException
    */
-  public function delete($header = []) {
+  public function delete($postField, $header = []) {
+    if (is_array($postField)) {
+      $query = http_build_query($postField);
+      curl_setopt($this->conn, CURLOPT_POSTFIELDS, $query);
+    } elseif (!empty($postField)) {
+      curl_setopt($this->conn, CURLOPT_POSTFIELDS, $postField);
+    }
+
     curl_setopt_array($this->conn, [
       CURLOPT_RETURNTRANSFER => TRUE,
       CURLOPT_ENCODING => '',
