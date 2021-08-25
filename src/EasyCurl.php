@@ -39,13 +39,19 @@ class EasyCurl {
    * @throws HTTPRequestException
    */
   public function put($postField, $header = []) {
+    if (is_array($postField)) {
+      $query = http_build_query($postField);
+      curl_setopt($this->conn, CURLOPT_POSTFIELDS, $query);
+    } elseif (!empty($postField)) {
+      curl_setopt($this->conn, CURLOPT_POSTFIELDS, $postField);
+    }
+
     curl_setopt_array($this->conn, [
       CURLOPT_CUSTOMREQUEST => "PUT",
       CURLOPT_ENCODING => "",
       CURLOPT_MAXREDIRS => 10,
       CURLOPT_TIMEOUT => 0,
       CURLOPT_FOLLOWLOCATION => TRUE,
-      CURLOPT_POSTFIELDS => $postField,
       CURLOPT_RETURNTRANSFER => TRUE,
       CURLOPT_HTTPHEADER => $header
     ]);
@@ -57,6 +63,13 @@ class EasyCurl {
    * @throws HTTPRequestException
    */
   public function post($postField, $header = []) {
+    if (is_array($postField)) {
+      $query = http_build_query($postField);
+      curl_setopt($this->conn, CURLOPT_POSTFIELDS, $query);
+    } elseif (!empty($postField)) {
+      curl_setopt($this->conn, CURLOPT_POSTFIELDS, $postField);
+    }
+
     curl_setopt_array($this->conn, [
       CURLOPT_RETURNTRANSFER => TRUE,
       CURLOPT_ENCODING => '',
@@ -64,7 +77,6 @@ class EasyCurl {
       CURLOPT_TIMEOUT => 0,
       CURLOPT_FOLLOWLOCATION => TRUE,
       CURLOPT_CUSTOMREQUEST => 'POST',
-      CURLOPT_POSTFIELDS => $postField,
       CURLOPT_HTTPHEADER => $header
     ]);
     $this->exec_message = curl_exec($this->conn);
