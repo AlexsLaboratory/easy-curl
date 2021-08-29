@@ -38,14 +38,7 @@ class EasyCurl {
   /**
    * @throws HTTPRequestException
    */
-  public function put($postField, $header = []) {
-    if (is_array($postField)) {
-      $query = http_build_query($postField);
-      curl_setopt($this->conn, CURLOPT_POSTFIELDS, $query);
-    } elseif (!empty($postField)) {
-      curl_setopt($this->conn, CURLOPT_POSTFIELDS, $postField);
-    }
-
+  public function put($header = []) {
     curl_setopt_array($this->conn, [
       CURLOPT_CUSTOMREQUEST => "PUT",
       CURLOPT_ENCODING => "",
@@ -72,11 +65,11 @@ class EasyCurl {
 
     curl_setopt_array($this->conn, [
       CURLOPT_RETURNTRANSFER => TRUE,
-      CURLOPT_ENCODING => '',
+      CURLOPT_ENCODING => "",
       CURLOPT_MAXREDIRS => 10,
       CURLOPT_TIMEOUT => 0,
       CURLOPT_FOLLOWLOCATION => TRUE,
-      CURLOPT_CUSTOMREQUEST => 'POST',
+      CURLOPT_CUSTOMREQUEST => "POST",
       CURLOPT_HTTPHEADER => $header
     ]);
     $this->exec_message = curl_exec($this->conn);
@@ -89,11 +82,11 @@ class EasyCurl {
   public function get($header = []) {
     curl_setopt_array($this->conn, [
       CURLOPT_RETURNTRANSFER => TRUE,
-      CURLOPT_ENCODING => '',
+      CURLOPT_ENCODING => "",
       CURLOPT_MAXREDIRS => 10,
       CURLOPT_TIMEOUT => 0,
       CURLOPT_FOLLOWLOCATION => TRUE,
-      CURLOPT_CUSTOMREQUEST => 'GET',
+      CURLOPT_CUSTOMREQUEST => "GET",
       CURLOPT_HTTPHEADER => $header
     ]);
     $this->exec_message = curl_exec($this->conn);
@@ -103,21 +96,14 @@ class EasyCurl {
   /**
    * @throws HTTPRequestException
    */
-  public function delete($postField, $header = []) {
-    if (is_array($postField)) {
-      $query = http_build_query($postField);
-      curl_setopt($this->conn, CURLOPT_POSTFIELDS, $query);
-    } elseif (!empty($postField)) {
-      curl_setopt($this->conn, CURLOPT_POSTFIELDS, $postField);
-    }
-
+  public function delete($header = []) {
     curl_setopt_array($this->conn, [
       CURLOPT_RETURNTRANSFER => TRUE,
-      CURLOPT_ENCODING => '',
+      CURLOPT_ENCODING => "",
       CURLOPT_MAXREDIRS => 10,
       CURLOPT_TIMEOUT => 0,
       CURLOPT_FOLLOWLOCATION => TRUE,
-      CURLOPT_CUSTOMREQUEST => 'DELETE',
+      CURLOPT_CUSTOMREQUEST => "DELETE",
       CURLOPT_HTTPHEADER => $header
     ]);
     $this->exec_message = curl_exec($this->conn);
