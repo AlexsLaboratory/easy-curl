@@ -68,7 +68,7 @@ class EasyCurlTest extends TestCase {
     $test = new EasyCurl("https://jsonplaceholder.typicode.com/posts/1");
     $error = FALSE;
     try {
-      $test->delete("");
+      $test->delete();
     } catch (HTTPRequestException $e) {
       $error = TRUE;
       echo $e->getCustomMessage();
